@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leitura bíblica online com todos os livros, capítulos e versículos. Hinos da Harpa Cristã, meditações diárias e muito mais.">
+  <title>Bíblia Viva Online - Fé que Transforma</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+    }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #2c3e50;
+    }
+    .content {
+      padding: 2rem;
+    }
+    .book {
+      margin-bottom: 2rem;
+    }
+    .chapter {
+      margin-bottom: 1rem;
+    }
+    .verse {
+      margin-left: 1rem;
+      color: #2c3e50;
+    }
+    .daily-meditation {
+      background: #ffeaa7;
+      padding: 1rem;
+      margin: 2rem 0;
+      border-left: 5px solid #fdcb6e;
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+    .lang-select {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bíblia Viva Online - Fé que Transforma</h1>
+  </header>
+
+  <nav>
+    <a href="#biblia">Bíblia</a>
+    <a href="#hinos">Hinos da Harpa</a>
+    <a href="#meditacao">Meditação Diária</a>
+    <a href="#traducoes">Traduções</a>
+  </nav>
+
+  <div class="content">
+    <section id="biblia">
+      <h2>Gênesis</h2>
+      <div class="chapter">
+        <h3>Capítulo 1</h3>
+        <p class="verse"><strong>1:</strong> No princípio, Deus criou os céus e a terra.</p>
+        <p class="verse"><strong>2:</strong> E a terra era sem forma e vazia...</p>
+        <!-- Mais versículos -->
+      </div>
+      <!-- Mais capítulos e livros -->
+    </section>
+
+    <section id="hinos">
+      <h2>Hinos da Harpa Cristã</h2>
+      <p><strong>Hino 15 - Mais perto quero estar</strong></p>
+      <audio controls src="hinos/hino15.mp3"></audio>
+      <p>Mais perto quero estar, meu Deus, de Ti...</p>
+      <!-- Mais hinos -->
+    </section>
+
+    <section id="meditacao" class="daily-meditation">
+      <h2>Meditação Diária</h2>
+      <p id="meditacao-texto">“Confia no Senhor de todo o teu coração...” (Provérbios 3:5)</p>
+    </section>
+
+    <section id="traducoes">
+      <h2>Traduções</h2>
+      <select class="lang-select" onchange="traduzir(this.value)">
+        <option value="pt">Português</option>
+        <option value="en">Inglês</option>
+        <option value="es">Espanhol</option>
+      </select>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Bíblia Viva Online - Todos os direitos reservados
+  </footer>
+
+  <script>
+    function traduzir(idioma) {
+      alert('Função de tradução ainda em desenvolvimento para idioma: ' + idioma);
+    }
+
+    // Exemplo simples de meditação diária dinâmica (mudaria com o tempo real em projeto completo)
+    const meditacoes = [
+      "Entrega o teu caminho ao Senhor; confia nele, e o mais Ele fará.",
+      "O Senhor é meu pastor; nada me faltará.",
+      "Tudo posso naquele que me fortalece."
+    ];
+    document.getElementById('meditacao-texto').innerText = meditacoes[new Date().getDate() % meditacoes.length];
+  </script>
+</body>
+</html>
